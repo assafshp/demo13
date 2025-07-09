@@ -34,3 +34,15 @@ try {
 } catch (error) {
     console.log('✓ Correctly caught division by zero:', error.message);
 }
+
+try {
+    calculateTotal([{ price: NaN }]);
+} catch (error) {
+    console.log('✓ Correctly caught NaN price:', error.message);
+}
+
+try {
+    divideNumbers(Infinity, 5);
+} catch (error) {
+    console.log('✓ Correctly caught Infinity parameter:', error.message);
+}
