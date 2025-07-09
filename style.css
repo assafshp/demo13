@@ -10,6 +10,27 @@
     --clear-hover-bg: #bf3f3f;
     --equals-bg: #28a745;
     --equals-hover-bg: #218838;
+    --body-bg: #f4f4f4;
+    --toggle-bg: #666;
+    --toggle-hover-bg: #888;
+}
+
+/* Light theme */
+:root.light-theme {
+    --calc-bg: #f9f9f9;
+    --display-bg: #ffffff;
+    --text-color: #333;
+    --button-bg: #e0e0e0;
+    --button-hover-bg: #d0d0d0;
+    --operator-bg: #f7921a;
+    --operator-hover-bg: #e08016;
+    --clear-bg: #ff6b6b;
+    --clear-hover-bg: #ff5252;
+    --equals-bg: #4caf50;
+    --equals-hover-bg: #45a049;
+    --body-bg: #e8e8e8;
+    --toggle-bg: #666;
+    --toggle-hover-bg: #888;
 }
 
 body {
@@ -17,7 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f4f4f4;
+    background-color: var(--body-bg);
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -98,6 +119,30 @@ body {
 .buttons button.active {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     transform: scale(0.98);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--toggle-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:hover {
+    background-color: var(--toggle-hover-bg);
 }
 
 /* Responsive Design */
