@@ -74,20 +74,19 @@ This section outlines the steps taken during the development of this web calcula
 15. **Testing Setup**: Added a testing framework (Jest) and implemented unit tests for the calculator's core logic.
 16. **Commit Message Generation**: Created a commit message summarizing all completed work.
 17. **Publish to GitHub**: Prepared the project for publishing to GitHub.
-18. add repo secrets: ANTHROPIC_API_KEY, CLAUDE_GITHUB_TOKEN
-19. mkdir -p .github/workflows
-20. touch .github/workflows/claude.yml
-21. touch .github/workflows/claude-review.yml
-22. touch CLAUDE.md
-23. add files content
-24. commit and push to main
-25. create new brach
-26. add buggy code
-27. commit and push
-28. create pull request
-29. view claude code actions
-30. @claude review security
-31. new issue -> @claude implement a new UI feature to toggle between dark mode (as it is now to light mode) in a new PR
+18. **Add Repository Secrets**: Added repository secrets: `ANTHROPIC_API_KEY`, `CLAUDE_GITHUB_TOKEN`.
+19. **Create GitHub Workflows Directory**: Created the `.github/workflows` directory.
+20. **Create GitHub Actions Workflow Files**: Created `claude.yml` and `claude-review.yml` within `.github/workflows`.
+21. **Create CLAUDE.md**: Created the `CLAUDE.md` file.
+22. **Add File Contents**: Added content to the newly created files.
+23. **Commit and Push to Main**: Committed changes and pushed to the `main` branch.
+24. **Create New Branch**: Created a new branch.
+25. **Add Buggy Code**: Introduced buggy code (for demonstration/testing purposes).
+26. **Commit and Push Buggy Code**: Committed and pushed the buggy code.
+27. **Create Pull Request**: Created a pull request.
+28. **View Claude Code Actions**: Viewed Claude's code actions.
+29. **Claude Security Review**: Requested Claude to review security.
+30. **New Feature Issue**: Created a new issue for Claude to implement a UI feature to toggle between dark mode and light mode in a new PR.
 
 ## Development Roadmap (Future Enhancements)
 
