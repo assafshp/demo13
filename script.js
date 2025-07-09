@@ -1,10 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
     const display = document.querySelector('.display');
     const buttons = document.querySelector('.buttons');
+    const themeToggle = document.querySelector('.theme-toggle');
     let currentInput = '0';
     let operator = null;
     let previousInput = '';
     let resetDisplay = false;
+
+    // Theme toggle functionality
+    function toggleTheme() {
+        const root = document.documentElement;
+        const isLightMode = root.classList.contains('light-theme');
+        
+        if (isLightMode) {
+            root.classList.remove('light-theme');
+            themeToggle.textContent = '🌙';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            root.classList.add('light-theme');
+            themeToggle.textContent = '☀️';
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Initialize theme from localStorage
+    function initializeTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        const root = document.documentElement;
+        
+        if (savedTheme === 'light') {
+            root.classList.add('light-theme');
+            themeToggle.textContent = '☀️';
+        } else {
+            root.classList.remove('light-theme');
+            themeToggle.textContent = '🌙';
+        }
+    }
+
+    // Initialize theme on page load
+    initializeTheme();
+
+    // Theme toggle event listener
+    themeToggle.addEventListener('click', toggleTheme);
 
     buttons.addEventListener('click', (event) => {
         const target = event.target;
