@@ -9,17 +9,15 @@ function calculateTotal(items) {
         throw new TypeError('Items must be an array');
     }
     
-    let total = 0;
-    for (let i = 0; i < items.length; i++) {  // Fixed: changed <= to <
-        if (items[i] == null) {
-            throw new TypeError(`Item at index ${i} is null or undefined`);
+    return items.reduce((total, item, index) => {
+        if (item == null) {
+            throw new TypeError(`Item at index ${index} is null or undefined`);
         }
-        if (!Number.isFinite(items[i].price)) {
-            throw new TypeError(`Item at index ${i} must have a valid numeric price property`);
+        if (!Number.isFinite(item.price)) {
+            throw new TypeError(`Item at index ${index} must have a valid numeric price property`);
         }
-        total += items[i].price;
-    }
-    return total;
+        return total + item.price;
+    }, 0);
 }
 
 /**
