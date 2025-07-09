@@ -79,6 +79,15 @@ This section outlines the steps taken during the development of this web calcula
 20. touch .github/workflows/claude.yml
 21. touch .github/workflows/claude-review.yml
 22. touch CLAUDE.md
+23. add files content
+24. commit and push to main
+25. create new brach
+26. add buggy code
+27. commit and push
+28. create pull request
+29. view claude code actions
+30. @claude review security
+31. new issue -> @claude implement a new UI feature to toggle between dark mode (as it is now to light mode) in a new PR
 
 ## Development Roadmap (Future Enhancements)
 
